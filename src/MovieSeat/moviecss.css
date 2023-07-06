@@ -1,0 +1,47 @@
+.main__Content {
+    position: relative;
+    padding: 30px;
+    background-color: wheat;
+    border-radius: 5px;
+}
+
+
+.smallBox {
+    position: relative;
+    margin: 15px;
+}
+
+.redBox::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    top: 30%;
+    left: -15px;
+}
+
+.greenBox::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    left: -15px;
+    top: 30%;
+}
+
+.emptyBox::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    left: -15px;
+    top: 30%;
+}
+
+.form-check-input {
+    position: relative !important;
+    margin: auto 0 !important;
+}
