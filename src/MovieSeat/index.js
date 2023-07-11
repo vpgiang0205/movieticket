@@ -30,7 +30,6 @@ export default class MovieSeat extends Component {
                                             <td>3</td>
                                             <td>4</td>
                                             <td>5</td>
-                                            <td />
                                             <td>6</td>
                                             <td>7</td>
                                             <td>8</td>
@@ -40,8 +39,7 @@ export default class MovieSeat extends Component {
                                             <td>12</td>
                                         </tr>
                                     </thead>
-                                    
-                                    <Seats /> {/* Hiển thị ghế theo từng dòng */}
+                                        <Seats /> {/* Hiển thị ghế theo từng dòng */}
                                 </table>
 
 

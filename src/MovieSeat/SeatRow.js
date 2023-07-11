@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 
 export default class SeatRow extends Component {
     render() {
-        const { row } = this.props
+        const { seat } = this.props
         return (
-            <tr>
-                {row}
-            </tr>
+            <div style={{ background: 'red' }}>
+                {seat.hang}
+            </div>
         )
     }
 }

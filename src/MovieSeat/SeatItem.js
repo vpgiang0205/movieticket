@@ -5,8 +5,9 @@ export default class SeatItem extends Component {
     const { seat } = this.props;
     return (
         <td>
-          <input type="checkbox" name="" id="" value={seat.soGhe} />
+          <input type="text" className='w-75' name="" id="" value={seat.soGhe} />
         </td>
+      
     );
   }
 }

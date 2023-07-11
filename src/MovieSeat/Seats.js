@@ -2,23 +2,36 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SeatItem from './SeatItem';
 import SeatRow from './SeatRow';
-
 class Seats extends Component {
-    renderListSeatRow = () => {
+    renderListSeat = () => {
         const { listSeat } = this.props;
-        return listSeat?.map((row) => {
-            if (row.hang) {
+        return listSeat?.map((item, index) => {
+            if (item.hang) {
                 return (
-                    <SeatRow key={row.hang} row={row.hang}>
-                    </SeatRow>
-                );
+                    <>
+                        <tr key={item.hang}>
+                            {item.hang}
+
+                            {item.danhSachGhe.map((seat) => {
+                                return (
+                                    <>
+                                        <SeatItem key={index} seat={seat} />
+                                    </>
+                                )
+                            })}
+                        </tr>
+                    </>
+
+                )
             }
             return null;
         });
     };
 
     render() {
-        return <>{this.renderListSeatRow()}</>;
+        return <>
+            {this.renderRow}
+            {this.renderListSeat()}</>;
     }
 }
 
