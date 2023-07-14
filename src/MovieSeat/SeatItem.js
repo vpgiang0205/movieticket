@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
-
+import './seatItem.css'
 export default class SeatItem extends Component {
+  handleCheckboxChange = (event) => {
+    const { seat, onChange } = this.props;
+    const isChecked = event.target.checked;
+    onChange(seat, isChecked);
+  };
   render() {
-    const { seat } = this.props;
+    const { seat, index } = this.props;
     return (
-        <td>
-          <input type="text" className='w-75' name="" id="" value={seat.soGhe} />
-        </td>
-      
+      <input
+        key={index}
+        type="checkbox"
+        name=""
+        id=""
+        value={seat.soGhe}
+        className="custom-checkbox"
+        onChange={this.handleCheckboxChange}
+      />
+
     );
   }
 }
